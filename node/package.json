@@ -1,0 +1,13 @@
+{
+    "name": "day1-node-llm",
+    "version": "1.0.0",
+    "description": "Node.js first call to OpenRouter LLM with streaming",
+    "type": "module",
+    "scripts": {
+        "start": "node llm_first_call.js"
+    },
+    "dependencies": {
+        "openai": "^4.52.0",
+        "dotenv": "^16.4.5"
+    }
+}
