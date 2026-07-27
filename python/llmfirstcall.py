@@ -72,8 +72,8 @@ try:
     stream = client.chat.completions.create(
         model="openai/gpt-oss-20b:free",  # Cheapest, fastest, reliable
         messages=messages,
-        temperature=0.7,              # Balanced creativity
-        max_tokens=300,               # Limits the response length
+        temperature=0.0,              # Balanced creativity
+        max_tokens=100,               # Limits the response length
         stream=True,                  # <-- Production standard
     )
 
@@ -85,6 +85,8 @@ try:
             print(content, end="", flush=True)
             full_response += content
 
+    if not full_response:
+        print("\n⚠️ The AI generated an empty response. Try increasing `max_tokens`.")
     print("\n\n✅ Streaming complete.")
     print(f"📝 Full response length: {len(full_response)} characters.")
 

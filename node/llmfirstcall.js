@@ -52,7 +52,7 @@ try {
     const stream = await client.chat.completions.create({
         model: 'openai/gpt-oss-20b:free',
         messages: messages,
-        temperature: 0.7,
+        temperature: 0.0,
         max_tokens: 300,
         stream: true,
     });
