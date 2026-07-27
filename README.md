@@ -16,3 +16,4 @@ This is a project that can call an LLM to talk to it responsivly.
 
 ### 3. Clone / Setup the Project
 ```bash
+ You can do this by downloading the zip file.
